@@ -1,3 +1,22 @@
+// re-usable margin-classes
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+.mb-md {
+  margin-bottom: 3rem;
+}
+
+.mb-lg {
+  margin-bottom: 4rem;
+}
+
+.mb-hg {
+  margin-bottom: 8rem;
+}
+
+//////////////////////////////////////////////
+
 %heading {
   font-family: $font-display;
   font-weight: 400;
@@ -9,10 +28,26 @@
 
 .heading-2 {
   @extend %heading;
+
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1;
+
+  &--light {
+    color: $color-grey-light-1;
+  }
+
+  &--dark {
+    color: $color-grey-dark-1;
+  }
 }
 
 .heading-3 {
   @extend %heading;
+
+  text-transform: uppercase;
+  color: $color-primary;
+  font-size: 1.6rem;
 }
 
 
@@ -28,4 +63,23 @@
     color: $color-grey-dark-1;
   }
 
+}
+
+.btn {
+  background-color: $color-primary;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-family: $font-display;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  cursor: pointer;
+  transition: all .1s;
+
+  &:hover {
+    //background-color: $color-primary-dark;
+    transform: scale(1.02);
+    box-shadow: 0rem .4rem .8rem .1rem $color-grey-dark-2;
+  }
 }
