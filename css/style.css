@@ -143,8 +143,28 @@ body {
   margin-bottom: 4rem; }
 
 .homes {
-  background-color: #c69963;
-  grid-column: center-start / center-end; }
+  grid-column: center-start / center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem; }
+
+.home {
+  background-color: #f9f7f6;
+  display: grid; }
+
+.home__img {
+  width: 100%; }
+
+.home__name {
+  width: 80%;
+  background-color: #101d2c;
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  justify-self: center; }
 
 .gallery {
   background-color: #aaa;
