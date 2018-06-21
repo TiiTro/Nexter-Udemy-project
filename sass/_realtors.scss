@@ -1,4 +1,5 @@
 .realtors {
+  display: grid;
   background-color: $color-secondary;
   grid-column: col-start 7 / full-end;
   display: grid;
@@ -9,14 +10,22 @@
 
   grid-row-gap: 2rem; // gap for the heading
 
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: min-content max-content;
-    grid-template-rows: repeat(3 max-content);
+    //grid-template-rows: repeat(3 max-content);
     grid-column-gap: 2rem;
     grid-row-gap: 5vh;
 
     align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
   }
 
   &__img {
