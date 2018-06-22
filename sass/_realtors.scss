@@ -12,12 +12,13 @@
 
   @media only screen and (max-width: $bp-medium) {
     grid-column: 1 / -1;
+    padding: 4rem 1rem;
   }
 
   &__list {
     display: grid;
     grid-template-columns: min-content max-content;
-    //grid-template-rows: repeat(3 max-content);
+    grid-template-rows: repeat(3 max-content);
     grid-column-gap: 2rem;
     grid-row-gap: 5vh;
 
@@ -25,6 +26,11 @@
 
     @media only screen and (max-width: $bp-medium) {
       grid-template-columns: repeat(3, min-content max-content);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: min-content max-content;
+      grid-template-rows: repeat(3 max-content);
     }
   }
 
@@ -34,10 +40,10 @@
     border-radius: 50%;
     justify-self: end;
     display: block;
-  }
 
-  &__details {
-    grid-column: 2 / 3;
+    @media only screen and (max-width: $bp-medium) {
+      margin-left: 4rem;
+    }
   }
 
   &__sold {

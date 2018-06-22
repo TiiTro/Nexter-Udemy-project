@@ -22,6 +22,7 @@ $font-display: 'Josefin Sans', sans-serif;
 $bp-largest: 75em; // 1200px/16(default font size) = 75
 $bp-large: 62.5em; // 1000px/16 = 62.5
 $bp-medium: 50em; // 800px/16 = 50
+$bp-small: 37.5em; // 600px/16 = 37.5
 
 //////////////////////////////////////////
 ////// MIXINS ///////////////////////////
@@ -70,9 +71,8 @@ body {
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
   }
 
+  //You don't need to define the rest of the rows, because they would be min-content, and that is the automatic way in which the content will be placed.
   @media only screen and (max-width: $bp-medium) {
-    grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content 40vw repeat(3, min-content);
-    
+    grid-template-rows: 6rem calc(100vh - 6rem);
   }
-
 }

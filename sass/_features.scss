@@ -10,6 +10,10 @@
 
   align-items: start;
 
+  @media only screen and (max-width: $bp-small) {
+    margin: 10rem 0;
+  }
+
 }
 
 .feature {
@@ -17,6 +21,11 @@
   grid-template-columns: min-content 1fr;
   grid-row-gap: 1.5rem;
   grid-column-gap: 2.5rem;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-row-gap: .3rem;
+    grid-column-gap: 1.5rem;
+  }
 
   &__icon {
     width: 4.5rem;
@@ -30,6 +39,5 @@
 
   &__text {
     font-size: 1.7rem;
-
   }
 }
