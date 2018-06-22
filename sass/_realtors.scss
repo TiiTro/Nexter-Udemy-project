@@ -51,4 +51,29 @@
     color: $color-grey-light-2;
     margin-top: -3px;
   }
+
+  &__link:link,
+  &__link:visited {
+    font-size: 1.5rem;
+    color: $color-grey-light-2;
+    text-decoration: none;
+  }
+
+  &__link:hover,
+  &__link:active {
+    //text-shadow: 2px 2px 2px $color-grey-dark-2;
+    text-decoration: underline;
+  }
+
+  &__link:hover {
+    transform: scale(1.05);
+  }
+
+  &__link:active {
+    transform: scale(.95);
+  }
+
+  span {
+    display: none;
+  }
 }
