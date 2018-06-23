@@ -83,10 +83,12 @@ body {
   text-transform: uppercase;
   padding: 1.8rem 3rem;
   cursor: pointer;
-  transition: all .1s; }
+  transition: all .2s; }
   .btn:hover {
-    transform: scale(1.02);
-    box-shadow: 0rem 0.4rem 0.8rem 0.1rem #6D5D4B; }
+    background-color: #B28451;
+    transform: scale(1.02); }
+  .btn:active {
+    transform: scale(1); }
 
 .sidebar {
   background-color: #c69963;
@@ -107,7 +109,8 @@ body {
   height: 2px;
   width: 4.5rem;
   justify-self: center;
-  margin-top: 4.5rem; }
+  margin-top: 4.5rem;
+  transition: all .2s; }
   @media only screen and (max-width: 62.5em) {
     .nav-btn {
       margin-top: 0;
@@ -244,13 +247,14 @@ body {
 */
 .realtors {
   display: grid;
-  background-color: #101d2c;
+  grid-template-rows: repeat(2, max-content) 5rem;
   grid-column: col-start 7 / full-end;
+  grid-row-gap: 2rem;
+  background-color: #101d2c;
   display: grid;
   padding: 3rem;
   justify-items: center;
-  align-content: center;
-  grid-row-gap: 2rem; }
+  align-content: center; }
   @media only screen and (max-width: 50em) {
     .realtors {
       grid-column: 1 / -1;
@@ -282,18 +286,32 @@ body {
     text-transform: uppercase;
     color: #aaa;
     margin-top: -3px; }
-  .realtors__link:link, .realtors__link:visited {
-    font-size: 1.5rem;
+  .realtors__link, .realtors__link:link, .realtors__link:visited {
+    position: relative;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.4rem;
     color: #aaa;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: all .2s;
+    backface-visibility: hidden; }
+    .realtors__link span, .realtors__link:link span, .realtors__link:visited span {
+      display: none;
+      transform: translateX(-1rem);
+      transition: all .2s; }
   .realtors__link:hover, .realtors__link:active {
-    text-decoration: underline; }
+    color: #c69963; }
+    .realtors__link:hover span, .realtors__link:active span {
+      display: inline-block;
+      margin: 2px;
+      left: 1;
+      transition: .2s;
+      transform: translateX(0); }
   .realtors__link:hover {
-    transform: scale(1.05); }
+    transform: scale(1.02); }
   .realtors__link:active {
-    transform: scale(0.95); }
-  .realtors span {
-    display: none; }
+    transform: scale(1);
+    color: #B28451; }
 
 .features {
   grid-column: center-start / center-end;
